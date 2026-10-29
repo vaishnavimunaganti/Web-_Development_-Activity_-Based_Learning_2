@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> register</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+            <section class="section registration" id="register">
+        <p class="small-title">YOUR EXPERIENCE STARTS HERE</p>
+        <h2 class="section-title">Register for TECHNOVA</h2>
+        <p class="section-description">
+            Fill in your details and choose your favourite event.
+        </p>
+
+        <form class="register-form" action="#" method="get">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="roll">Roll Number</label>
+            <input type="text" id="roll" name="roll"
+                   placeholder="Enter your roll number" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="">Select department</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>Mechanical</option>
+                <option>Civil</option>
+                <option>Other</option>
+            </select>
+
+            <label for="year">Year of Study</label>
+            <select id="year" name="year" required>
+                <option value="">Select year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+            </select>
+
+            <label for="event">Choose an Event</label>
+            <select id="event" name="event" required>
+                <option value="">Select an event</option>
+                <option>Code Clash</option>
+                <option>Hackathon</option>
+                <option>Tech Quiz</option>
+                <option>Project Expo</option>
+                <option>Dance Battle</option>
+                <option>Voice of Campus</option>
+                <option>Drama Fest</option>
+                <option>Fashion Walk</option>
+                <option>AI Workshop</option>
+                <option>Web Development</option>
+                <option>Robotics Workshop</option>
+            </select>
+
+            <button type="submit" class="btn submit-btn">
+                Submit Registration
+            </button>
+        </form>
+    </section>
+    </body>
+</html>

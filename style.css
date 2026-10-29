@@ -1,0 +1,486 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9ff;
+    color: #20213a;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+header {
+    background-color: #11132b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c4b5fd;
+}
+
+/* Home banner */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(12, 14, 42, 0.82),
+            rgba(49, 29, 100, 0.86)
+        ),
+        url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.tagline,
+.small-title {
+    color: #8b5cf6;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero .tagline {
+    color: #d8ccff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #c4b5fd;
+}
+
+.hero-content > p:not(.tagline):not(.event-info) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #e5e7eb;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #8b5cf6;
+    color: white;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #6d28d9;
+    transform: translateY(-3px);
+}
+
+.event-info {
+    margin-top: 25px;
+    color: #e9ddff;
+    font-size: 14px;
+}
+
+/* Common section design */
+.section {
+    padding: 70px 7%;
+    text-align: center;
+    scroll-margin-top: 75px;
+}
+
+.alternate {
+    background-color: #eeedff;
+}
+
+.section-title {
+    font-size: 34px;
+    margin: 8px 0 10px;
+    color: #171936;
+}
+
+.section-description {
+    color: #666780;
+    margin-bottom: 35px;
+}
+
+/* Event cards */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.event-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(25, 22, 65, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(25, 22, 65, 0.15);
+}
+
+.event-card img {
+    display: block;
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #5b35b5;
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.card-content p {
+    color: #666780;
+    font-size: 14px;
+}
+
+.card-content .event-date {
+    margin-top: 15px;
+    color: #7c3aed;
+    font-weight: bold;
+}
+
+/* Workshop cards */
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.workshop-card {
+    padding: 28px;
+    background-color: white;
+    border-left: 5px solid #8b5cf6;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(25, 22, 65, 0.08);
+    transition: transform 0.3s;
+}
+
+.workshop-card:hover {
+    transform: translateY(-5px);
+}
+
+.workshop-card h3 {
+    color: #4c2b9c;
+    margin-bottom: 10px;
+}
+
+.workshop-card p {
+    color: #666780;
+    font-size: 14px;
+}
+
+.workshop-card .event-date {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #7c3aed;
+}
+
+/* Schedule table */
+.table-container {
+    max-width: 1000px;
+    margin: 30px auto 0;
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(25, 22, 65, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5f2;
+}
+
+th {
+    background-color: #30205d;
+    color: white;
+}
+
+tr:hover td {
+    background-color: #f5f2ff;
+}
+
+/* Coordinator cards */
+.coordinator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.coordinator-card {
+    background-color: white;
+    padding: 28px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(25, 22, 65, 0.08);
+}
+
+.coordinator-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ede9fe;
+    color: #6d28d9;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.coordinator-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #30205d;
+}
+
+.coordinator-card p {
+    color: #666780;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Rules */
+.rules-box {
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(25, 22, 65, 0.08);
+}
+
+.rules-box ol {
+    padding-left: 25px;
+}
+
+.rules-box li {
+    padding: 8px 0;
+    color: #45465e;
+}
+
+/* Registration form */
+.registration {
+    background-color: #f8f7ff;
+}
+
+.register-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(25, 22, 65, 0.1);
+    text-align: left;
+}
+
+.register-form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #30314c;
+}
+
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5d5e5;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    outline: 2px solid #a78bfa;
+    border-color: #8b5cf6;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 25px;
+    font-family: inherit;
+}
+
+/* Footer */
+footer {
+    padding: 35px 20px;
+    background-color: #11132b;
+    color: white;
+    text-align: center;
+}
+
+footer h2 {
+    color: #c4b5fd;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #d1d5e8;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 600px) {
+    .section {
+        padding: 50px 5%;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-content > p:not(.tagline):not(.event-info) {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .event-grid,
+    .workshop-grid,
+    .coordinator-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card img {
+        height: 210px;
+    }
+
+    .register-form {
+        padding: 22px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
